@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :posts , :only => [:index, :show, :new, :create, :edit, :update, :destroy]
   resources :welcome, :only => [:index]
   root "welcome#index"
+  resources :users, :only => [:show, :index, :edit, :update]
 end
