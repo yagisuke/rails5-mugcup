@@ -4,11 +4,11 @@
   <p><label>名前</label></p>
   <%= @post.name %>
   <p><label>内容</label></p>
-  <%= f.text_area :content %>
+  <%= f.text_area :content, :class => "form-control" %>
   <p><label>場所</label></p>
-  <%= f.text_field :place %>
-  <br>
-  <%= f.submit "変更する" %>
+  <%= f.text_field :place, :class => "form-control" %>
+  <br><br>
+  <%= f.submit "変更する", :class => "btn btn-primary" %>
 <% end %>
-<br><br><br>
-<a href="/posts/">トップに戻る</a>
+<hr>
+<a href="/posts/" class="btn btn-info">トップに戻る</a>

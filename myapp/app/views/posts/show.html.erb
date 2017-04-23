@@ -3,9 +3,7 @@
 <p><%= @post.name %></p>
 <p><%= @post.content %></p>
 <p><%= @post.place %></p>
-<br><br><br>
-<a href="/posts/<%= @post.id %>/edit/">投稿を変更する</a>
-|
-<a href="/posts/<%= @post.id %>" data-method="delete">投稿を削除する</a>
-|
-<a href="/posts/">トップに戻る</a>
+<br><br>
+<a href="/posts/<%= @post.id %>/edit/" class="btn btn-primary">投稿を変更する</a>
+<a href="/posts/<%= @post.id %>" data-method="delete"  class="btn btn-danger">投稿を削除する</a>
+<a href="/posts/" class="btn btn-info">トップに戻る</a>
