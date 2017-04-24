@@ -1,7 +1,12 @@
 <h1>投稿一覧</h1>
 <hr>
 <% @posts.each do |p| %>
-  <p><a href="/posts/<%= p.id %>/"><%= p.id %>：<%= p.name %></a></p>
+  <p>
+    <a href="/posts/<%= p.id %>/">
+      <% user = User.find(p.user_id) %>
+      <%= p.id %>：<%= user.family_name %><%= user.first_name %>
+    </a>
+  </p>
   <p><%= p.content %></p>
   <p><%= p.place %></p>
   <hr>

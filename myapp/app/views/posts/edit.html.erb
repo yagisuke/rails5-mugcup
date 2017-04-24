@@ -1,11 +1,11 @@
 <h1>投稿を作る</h1>
 <hr>
 <%= form_for @post do |f| %>
-  <p><label>名前</label></p>
-  <%= @post.name %>
-  <p><label>内容</label></p>
+  <p>名前</p>
+  <%= @user.family_name %><%= @user.first_name %>
+  <p>内容</p>
   <%= f.text_area :content, :class => "form-control" %>
-  <p><label>場所</label></p>
+  <p>場所</p>
   <%= f.text_field :place, :class => "form-control" %>
   <br><br>
   <%= f.submit "変更する", :class => "btn btn-primary" %>
